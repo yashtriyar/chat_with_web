@@ -53,7 +53,7 @@ def get_vectorstore_from_url(url):
 #-----------------------------------------------------------------------------------------------------------
 
 def get_context_retriever_chain(vector_store):
-    llm = ChatOpenAI()
+    llm = ChatOpenAI(model_name="gpt-4", openai_api_key=openai_api_key, streaming=True)
     
     retriever = vector_store.as_retriever()
     
@@ -69,7 +69,7 @@ def get_context_retriever_chain(vector_store):
     
 def get_conversational_rag_chain(retriever_chain): 
     
-    llm = ChatOpenAI()
+    llm = ChatOpenAI(model_name="gpt-4", openai_api_key=openai_api_key, streaming=True)
     
     prompt = ChatPromptTemplate.from_messages([
       ("system", "Answer the user's questions based on the below context:\n\n{context}"),
@@ -97,22 +97,24 @@ st.set_page_config(page_title="Chat with websites", page_icon="🤖")
 st.title("Chat with websites")
 st.sidebar.markdown("Created by: Yash Triyar ❤️‍🔥")
 
+
 # sidebar
 with st.sidebar:
     st.header("Settings")
     website_url = st.text_input("Website URL")
-    openaikey=st.text_input("Provide your OpenAI API Key")
+    
+    openai_api_key = st.text_input("OpenAI API Key", key="langchain_search_api_key_openai", type="password")
 
 if website_url is None or website_url == "":
     st.info("Please enter a website URL")
 
-elif openaikey is None or openaikey == "":
+elif openai_api_key is None or openai_api_key == "":
         st.info("Please enter your OpenAI API key.")
     
 
 else:
 # main content
-    OPENAI_API_KEY=openaikey
+    #OPENAI_API_KEY=openaikey
     # session state
     if "chat_history" not in st.session_state:
         st.session_state.chat_history = [
