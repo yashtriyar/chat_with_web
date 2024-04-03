@@ -6,6 +6,8 @@ Overview
 This project implements a flexible chatbot that can hold conversations informed by content from a specified website. It leverages the power of Streamlit for a web-based interface and LangChain for advanced language modeling and information retrieval.
 Try it on - [chatwithaweb.streamlit.app
 ](https://chatwithaweb.streamlit.app/)
+
+
 Features
 
 Contextualized Conversations: The chatbot understands the context of previous interactions, allowing for more natural and informative conversations.
@@ -69,6 +71,7 @@ Retrieval and Response Generation:
 The user's queries are used to generate a new search query targeted at the vector store.
 Relevant content is retrieved from the vector store, providing context for the response.
 The OpenAI LLM combines retrieved context and the original query to generate an informed response.
+
 Customization
 
 Experiment with different websites to tailor the chatbot's knowledge base.
