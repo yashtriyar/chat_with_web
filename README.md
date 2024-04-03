@@ -4,8 +4,8 @@ Title: Website-Specific Chatbot with Streamlit and LangChain
 Overview
 
 This project implements a flexible chatbot that can hold conversations informed by content from a specified website. It leverages the power of Streamlit for a web-based interface and LangChain for advanced language modeling and information retrieval.
-Try it on - chatwithaweb.streamlit.app
-
+Try it on - [chatwithaweb.streamlit.app
+](https://chatwithaweb.streamlit.app/)
 Features
 
 Contextualized Conversations: The chatbot understands the context of previous interactions, allowing for more natural and informative conversations.
