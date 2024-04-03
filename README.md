@@ -74,4 +74,4 @@ Experiment with different websites to tailor the chatbot's knowledge base.
 Explore the various modules and prompt templates within LangChain to fine-tune the chatbot's behavior.
 Note: To use Google Gemini, you'd need to make adjustments to the code and obtain credentials for its API.
 
-Let me know if you'd like any specific sections of the README elaborated on further!
+
