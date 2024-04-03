@@ -95,6 +95,7 @@ def get_response(user_input):
 # app config
 st.set_page_config(page_title="Chat with websites", page_icon="🤖")
 st.title("Chat with websites")
+st.sidebar.markdown("Created by: Yash Triyar ❤️‍🔥")
 
 # sidebar
 with st.sidebar:
